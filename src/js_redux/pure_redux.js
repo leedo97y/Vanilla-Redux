@@ -1,28 +1,8 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import App from "./App";
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
 import { legacy_createStore as createStore } from "redux";
 
 const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const text = document.querySelector(".text");
-
-// const reducer = (count = 0, action) => {
-//   if (action.type === "ADD") {
-//     count++;
-//   } else if (action.type === "MINUS") {
-//     count--;
-//   }
-//   return count;
-// };
 
 const ADD = "ADD";
 const MINUS = "MINUS";
@@ -54,11 +34,10 @@ function handleMinus() {
   store.dispatch({ type: "MINUS" });
 }
 
-// console.log(store.getState());
-
 plus.addEventListener("click", handleAdd);
 minus.addEventListener("click", handleMinus);
 
+// _________________________________________________________________
 // add todos
 const input = document.querySelector("input");
 const form = document.querySelector("form");
